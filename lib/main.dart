@@ -48,6 +48,8 @@ class _HomePageState extends State<_HomePage> {
               builder: (context, snapshot) {
                 if (snapshot.hasData) {
                   return Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -59,7 +61,11 @@ class _HomePageState extends State<_HomePage> {
                               padding: const EdgeInsets.all(0.0),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15.0),
-                                color: Colors.blueAccent,
+                                // color: Colors.blueAccent,
+                                image: DecorationImage(
+                                  image: NetworkImage("https://lp-cms-production.imgix.net/2019-06/9483508eeee2b78a7356a15ed9c337a1-bengaluru-bangalore.jpg"),
+                                  fit: BoxFit.fill
+                                )
                               ),
                               height: 80,
                               width: 300,
@@ -70,7 +76,8 @@ class _HomePageState extends State<_HomePage> {
                                     "Place:",
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
-                                        fontSize: 20),
+                                        fontSize: 20,
+                                    color: Colors.black),
                                   ),
                                   Text(
                                     snapshot.data['name'].toString(),
@@ -86,7 +93,10 @@ class _HomePageState extends State<_HomePage> {
                               padding: const EdgeInsets.all(0.0),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15.0),
-                                color: Colors.blueAccent,
+                                  image: DecorationImage(
+                                      image: NetworkImage("https://media.istockphoto.com/id/1368007300/video/sun-comes-out-from-behind-a-cloud-in-the-early-morning-above-the-clouds-flying-above-the.jpg?b=1&s=640x640&k=20&c=WedPUUgBFvgzvAMQDlrTQPMx_Ww6emScWM8I4C2hA4g="),
+                                      fit: BoxFit.fill
+                                  )
                               ),
                               height: 80,
                               width: 300,
